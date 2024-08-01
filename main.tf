@@ -39,7 +39,7 @@ resource "aws_security_group_rule" "blog_http_in" {
   from_port = 80
   to_port = 80
   protocol = tcp
-  cidr_blocks = [0.0.0.0/0]
+  cidr_blocks = "[0.0.0.0/0]"
 
   security_group_id = blog.id
 }
@@ -50,7 +50,7 @@ resource "aws_security_group_rule" "blog_https_in" {
   from_port = 443
   to_port = 443
   protocol = tcp
-  cidr_blocks = [0.0.0.0/0]
+  cidr_blocks = "[0.0.0.0/0]"
 
   security_group_id = blog.id
 }
@@ -63,4 +63,3 @@ resource "aws_security_group_rule" "blog_everything_out" {
 
   security_group_id = blog.id
 }
-}}
