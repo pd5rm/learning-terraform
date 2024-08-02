@@ -7,12 +7,12 @@ variable "ami_filter" {
   description = "filter owner"
   type = object ({
     name = string
-    owner = string
+    owners = string
   })
 
   default = {
     name   = "bitnami-tomcat-*-x86_64-hvm-ebs-nami"
-    owner = "979382823631"
+    owners = "979382823631"
   }
 }
 
@@ -30,10 +30,10 @@ variable "environment" {
   }
 }
 
-variable "min_size" {
+variable "asg_min_size" {
   default = 1
 }
 
-variable "max_size" {
+variable "asg_max_size" {
   default = 2
 }
